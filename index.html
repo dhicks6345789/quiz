@@ -35,9 +35,10 @@ More details: https://github.com/dhicks6345789/quiz
 					teamCharValue = document.getElementById(teamName + "Char").value;
 					if (teamChar == teamCharValue) {
 						document.getElementById("answers").disabled = true;
-						document.getElementById(teamName + "Audio").play();
+						audioElement = document.getElementById(teamName + "Audio");
+						audioElement.onended = document.getElementById("ticks").play();
+						audioElement.play();
 						tickCount = document.getElementById("answerSeconds").value;
-						document.getElementById("ticks").play();
 						tickInterval = setInterval(doTick, 1500);
 					}
 				});
