@@ -9,9 +9,20 @@ More details: https://github.com/dhicks6345789/quiz
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Quiz</title>
 		<script>
+			var tickInterval;
+			var tickCount;
+			
 			// This is where main executation starts, when the page is loaded and ready.
 			function onPageLoad() {
 				document.getElementById("answers").value = "";
+			}
+			
+			function doTick() {
+				tickCount = tickCount - 1;
+				if (tickCount == 0) {
+					clearInterval(tickInterval);
+				}
+				console.log(tickCount);
 			}
 			
 			// Handle the user pressing a key.
@@ -23,6 +34,8 @@ More details: https://github.com/dhicks6345789/quiz
 						document.getElementById(teamName + "Audio").play();
 					}
 				});
+				tickCount = 5;
+				tickInterval = setInterval(doTick, 1000);
 				document.getElementById("answers").value = "";
 			}
 		</script>
