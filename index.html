@@ -38,7 +38,7 @@ More details: https://github.com/dhicks6345789/quiz
 						audioElement = document.getElementById(teamName + "Audio");
 						audioElement.onended = function() {
 							console.log("Team name play ended.");
-							//document.getElementById("ticks").play();
+							document.getElementById("ticks").play();
 						};
 						audioElement.play();
 						tickCount = document.getElementById("answerSeconds").value;
