@@ -11,12 +11,12 @@ More details: https://github.com/dhicks6345789/quiz
 		<script>
 			// This is where main executation starts, when the page is loaded and ready.
 			function onPageLoad() {
-				console.log("Bananas");
+				document.getElementById("answers").value = "";
 			}
 			
 			// Handle the user pressing a key.
 			function handleKeypress(theEvent) {
-				answers = document.getElementById("answers");
+				// answers = document.getElementById("answers");
 				team = String.fromCharCode(theEvent.which);
 				console.log(team);
 			}
