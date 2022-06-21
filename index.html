@@ -19,10 +19,12 @@ More details: https://github.com/dhicks6345789/quiz
 			
 			function doTick() {
 				tickCount = tickCount - 1;
+				document.getElementById("tick").play();
 				if (tickCount == 0) {
 					clearInterval(tickInterval);
+					document.getElementById("answers").disabled = false;
+					document.getElementById("answers").value = "";
 				}
-				document.getElementById("tick").play();
 			}
 			
 			// Handle the user pressing a key.
@@ -31,12 +33,12 @@ More details: https://github.com/dhicks6345789/quiz
 				["teamA", "teamB", "teamC", "teamD", "teamE", "teamF"].forEach(function(teamName, teamIndex) {
 					teamCharValue = document.getElementById(teamName + "Char").value;
 					if (teamChar == teamCharValue) {
+						document.getElementById("answers").disabled = true;
 						document.getElementById(teamName + "Audio").play();
+						tickCount = document.getElementById("answerSeconds").value;
+						tickInterval = setInterval(doTick, 1000);
 					}
 				});
-				tickCount = document.getElementById("answerSeconds").value;
-				tickInterval = setInterval(doTick, 1000);
-				document.getElementById("answers").value = "";
 			}
 		</script>
 	</head>
@@ -70,7 +72,7 @@ More details: https://github.com/dhicks6345789/quiz
 			TeamF: <input type="text" id="teamFChar" value="f">
 		</div>
 		<div style="text-align:center;">
-			Time to answer: <input type="text" id="answerSeconds" value="5"> seconds
+			Time to answer: <input type="text" id="answerSeconds" value="5"> seconds.
 		</div>
 		<div style="text-align:center;">
 			Documentation and source code available on <a href="https://github.com/dhicks6345789/quiz">Github</a>.
