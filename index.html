@@ -19,6 +19,7 @@ More details: https://github.com/dhicks6345789/quiz
 				team = String.fromCharCode(theEvent.which);
 				console.log(team);
 				document.getElementById("answers").value = "";
+				document.getElementById("teamA").play();
 			}
 		</script>
 	</head>
@@ -33,5 +34,6 @@ More details: https://github.com/dhicks6345789/quiz
 		<div style="text-align:center;">
 			Documentation and source code available on <a href="https://github.com/dhicks6345789/quiz">Github</a>.
 		</div>
+		<audio src="teamA.mp3" id="teamA"></audio>
 	</body>
 </html>
