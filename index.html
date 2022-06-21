@@ -22,7 +22,7 @@ More details: https://github.com/dhicks6345789/quiz
 				if (tickCount == 0) {
 					clearInterval(tickInterval);
 				}
-				console.log(tickCount);
+				document.getElementById("tick").play();
 			}
 			
 			// Handle the user pressing a key.
@@ -34,7 +34,7 @@ More details: https://github.com/dhicks6345789/quiz
 						document.getElementById(teamName + "Audio").play();
 					}
 				});
-				tickCount = 5;
+				tickCount = document.getElementById("answerSeconds").value;
 				tickInterval = setInterval(doTick, 1000);
 				document.getElementById("answers").value = "";
 			}
@@ -68,6 +68,9 @@ More details: https://github.com/dhicks6345789/quiz
 		</div>
 		<div style="text-align:center;">
 			TeamF: <input type="text" id="teamFChar" value="f">
+		</div>
+		<div style="text-align:center;">
+			Time to answer: <input type="text" id="answerSeconds" value="5"> seconds
 		</div>
 		<div style="text-align:center;">
 			Documentation and source code available on <a href="https://github.com/dhicks6345789/quiz">Github</a>.
