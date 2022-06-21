@@ -19,21 +19,35 @@ More details: https://github.com/dhicks6345789/quiz
 				team = String.fromCharCode(theEvent.which);
 				console.log(team);
 				document.getElementById("answers").value = "";
-				document.getElementById("teamA").play();
+				document.getElementById("teamAAudio").play();
 			}
 		</script>
 	</head>
 	<!-- The HTML elements that make up the page. -->
 	<body onload="onPageLoad()">
 		<div style="text-align:center;">
-			Quiz!
+			<h1>Quiz!</h1>
 		</div>
 		<div style="text-align:center;">
 			<input type="text" id="answers" onkeypress="handleKeypress(event)">
 		</div>
 		<div style="text-align:center;">
+			TeamA: <input type="text" id="teamAChar">a</input>
+			TeamB: <input type="text" id="teamBChar">b</input>
+			TeamC: <input type="text" id="teamCChar">c</input>
+			TeamD: <input type="text" id="teamDChar">d</input>
+			TeamE: <input type="text" id="teamEChar">e</input>
+			TeamF: <input type="text" id="teamFChar">f</input>
+		</div>
+		<div style="text-align:center;">
 			Documentation and source code available on <a href="https://github.com/dhicks6345789/quiz">Github</a>.
 		</div>
-		<audio src="teamA.mp3" id="teamA"></audio>
+		<audio src="tick.mp3" id="tick"></audio>
+		<audio src="teamA.mp3" id="teamAAudio"></audio>
+		<audio src="teamB.mp3" id="teamBAudio"></audio>
+		<audio src="teamC.mp3" id="teamCAudio"></audio>
+		<audio src="teamD.mp3" id="teamDAudio"></audio>
+		<audio src="teamE.mp3" id="teamEAudio"></audio>
+		<audio src="teamF.mp3" id="teamEAudio"></audio>
 	</body>
 </html>
