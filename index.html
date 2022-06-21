@@ -17,10 +17,10 @@ More details: https://github.com/dhicks6345789/quiz
 			// Handle the user pressing a key.
 			function handleKeypress(theEvent) {
 				teamChar = String.fromCharCode(theEvent.which);
-				["teamAChar", "teamBChar", "teamCChar", "teamDChar", "teamEChar", "teamFChar"].forEach(function(teamNameChar, teamIndex) {
-					teamValue = document.getElementById(teamNameChar).value;
-					if (teamChar == teamValue) {
-						document.getElementById("teamAAudio").play();
+				["teamA", "teamB", "teamC", "teamD", "teamE", "teamF"].forEach(function(teamName, teamIndex) {
+					teamCharValue = document.getElementById(teamName + "Char").value;
+					if (teamChar == teamCharValue) {
+						document.getElementById(teamName + "Audio").play();
 					}
 				});
 				document.getElementById("answers").value = "";
