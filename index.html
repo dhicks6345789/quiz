@@ -16,8 +16,10 @@ More details: https://github.com/dhicks6345789/quiz
 			
 			// Handle the user pressing a key.
 			function handleKeypress(theEvent) {
-				team = String.fromCharCode(theEvent.which);
-				console.log(team);
+				teamChar = String.fromCharCode(theEvent.which);
+				["teamAChar", "teamBChar"].forEach(function(teacmIndex, teamValue) {
+					console.log(teamValue);
+				});
 				document.getElementById("answers").value = "";
 				document.getElementById("teamAAudio").play();
 			}
@@ -30,6 +32,9 @@ More details: https://github.com/dhicks6345789/quiz
 		</div>
 		<div style="text-align:center;">
 			<input type="text" id="answers" onkeypress="handleKeypress(event)">
+		</div>
+		<div style="text-align:center;">
+			<h2>Assigned Keys:</h2>
 		</div>
 		<div style="text-align:center;">
 			TeamA: <input type="text" id="teamAChar" value="a">
