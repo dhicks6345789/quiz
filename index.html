@@ -36,7 +36,7 @@ More details: https://github.com/dhicks6345789/quiz
 					if (teamChar == teamCharValue) {
 						document.getElementById("answers").disabled = true;
 						audioElement = document.getElementById(teamName + "Audio");
-						audioElement.onended = document.getElementById("ticks").play();
+						audioElement.onended = document.getElementById("ticks").play;
 						audioElement.play();
 						tickCount = document.getElementById("answerSeconds").value;
 						tickInterval = setInterval(doTick, 1500);
