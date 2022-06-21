@@ -16,9 +16,9 @@ More details: https://github.com/dhicks6345789/quiz
 			
 			// Handle the user pressing a key.
 			function handleKeypress(theEvent) {
-				// answers = document.getElementById("answers");
 				team = String.fromCharCode(theEvent.which);
 				console.log(team);
+				document.getElementById("answers").value = "";
 			}
 		</script>
 	</head>
