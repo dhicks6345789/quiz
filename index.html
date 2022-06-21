@@ -15,8 +15,9 @@ More details: https://github.com/dhicks6345789/quiz
 			}
 			
 			// Handle the user pressing a key.
-			function handleKeypress() {
+			function handleKeypress(theEvent) {
 				answers = document.getElementById("answers");
+				console.log(theEvent.which);
 				console.log(answers.value);
 			}
 		</script>
@@ -27,7 +28,7 @@ More details: https://github.com/dhicks6345789/quiz
 			Quiz!
 		</div>
 		<div style="text-align:center;">
-			<input type="text" id="answers" onkeypress="handleKeypress()">
+			<input type="text" id="answers" onkeypress="handleKeypress(event)">
 		</div>
 		<div style="text-align:center;">
 			Documentation and source code available on <a href="https://github.com/dhicks6345789/quiz">Github</a>.
