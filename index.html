@@ -17,7 +17,7 @@ More details: https://github.com/dhicks6345789/quiz
 			// Handle the user pressing a key.
 			function handleKeypress(theEvent) {
 				teamChar = String.fromCharCode(theEvent.which);
-				["teamAChar", "teamBChar"].forEach(function(teacmIndex, teamValue) {
+				["teamAChar", "teamBChar"].forEach(function(teamValue, teamIndex) {
 					console.log(teamValue);
 				});
 				document.getElementById("answers").value = "";
