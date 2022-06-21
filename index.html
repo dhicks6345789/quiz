@@ -19,9 +19,9 @@ More details: https://github.com/dhicks6345789/quiz
 			
 			function doTick() {
 				tickCount = tickCount - 1;
-				document.getElementById("tick").play();
 				if (tickCount == 0) {
 					clearInterval(tickInterval);
+					document.getElementById("ticks").stop();
 					document.getElementById("answers").disabled = false;
 					document.getElementById("answers").value = "";
 				}
@@ -36,6 +36,7 @@ More details: https://github.com/dhicks6345789/quiz
 						document.getElementById("answers").disabled = true;
 						document.getElementById(teamName + "Audio").play();
 						tickCount = document.getElementById("answerSeconds").value;
+						document.getElementById("ticks").play();
 						tickInterval = setInterval(doTick, 1500);
 					}
 				});
@@ -77,7 +78,7 @@ More details: https://github.com/dhicks6345789/quiz
 		<div style="text-align:center;">
 			Documentation and source code available on <a href="https://github.com/dhicks6345789/quiz">Github</a>.
 		</div>
-		<audio src="tick.mp3" id="tick"></audio>
+		<audio src="ticks.mp3" id="ticks"></audio>
 		<audio src="teamA.mp3" id="teamAAudio"></audio>
 		<audio src="teamB.mp3" id="teamBAudio"></audio>
 		<audio src="teamC.mp3" id="teamCAudio"></audio>
