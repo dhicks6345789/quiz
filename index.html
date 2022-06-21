@@ -7,7 +7,7 @@ More details: https://github.com/dhicks6345789/quiz
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Quiz</title>
+		<title>Quiz!</title>
 		<script>
 			var tickInterval;
 			var tickCount;
@@ -23,6 +23,7 @@ More details: https://github.com/dhicks6345789/quiz
 					clearInterval(tickInterval);
 					document.getElementById("ticks").pause();
 					document.getElementById("ticks").currentTime = 0;
+					document.getElementById("bell").play();
 					document.getElementById("answers").disabled = false;
 					document.getElementById("answers").value = "";
 				}
@@ -37,7 +38,6 @@ More details: https://github.com/dhicks6345789/quiz
 						document.getElementById("answers").disabled = true;
 						audioElement = document.getElementById(teamName + "Audio");
 						audioElement.onended = function() {
-							console.log("Team name play ended.");
 							document.getElementById("ticks").play();
 						};
 						audioElement.play();
@@ -84,6 +84,7 @@ More details: https://github.com/dhicks6345789/quiz
 			Documentation and source code available on <a href="https://github.com/dhicks6345789/quiz">Github</a>.
 		</div>
 		<audio src="ticks.mp3" id="ticks"></audio>
+		<audio src="bell.mp3" id="bell"></audio>
 		<audio src="teamA.mp3" id="teamAAudio"></audio>
 		<audio src="teamB.mp3" id="teamBAudio"></audio>
 		<audio src="teamC.mp3" id="teamCAudio"></audio>
