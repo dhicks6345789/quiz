@@ -11,7 +11,13 @@ More details: https://github.com/dhicks6345789/quiz
 		<script>
 			// This is where main executation starts, when the page is loaded and ready.
 			function onPageLoad() {
-				console.log("Bananas")
+				console.log("Bananas");
+			}
+			
+			// Handle the user pressing a key.
+			function handleKeypress() {
+				answers document.getElementById("answers");
+				console.log(answers.value);
 			}
 		</script>
 	</head>
@@ -19,6 +25,9 @@ More details: https://github.com/dhicks6345789/quiz
 	<body onload="onPageLoad()">
 		<div style="text-align:center;">
 			Quiz!
+		</div>
+		<div style="text-align:center;">
+			<input type="text" id="answers" onkeypress="handleKeypress()">
 		</div>
 		<div style="text-align:center;">
 			Documentation and source code available on <a href="https://github.com/dhicks6345789/quiz">Github</a>.
