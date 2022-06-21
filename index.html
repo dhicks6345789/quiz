@@ -21,7 +21,8 @@ More details: https://github.com/dhicks6345789/quiz
 				tickCount = tickCount - 1;
 				if (tickCount == 0) {
 					clearInterval(tickInterval);
-					document.getElementById("ticks").stop();
+					document.getElementById("ticks").pause();
+					document.getElementById("ticks").currentTime = 0;
 					document.getElementById("answers").disabled = false;
 					document.getElementById("answers").value = "";
 				}
